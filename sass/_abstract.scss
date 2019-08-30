@@ -1,0 +1,144 @@
+/**
+|--------------------------------------------------
+| VARIABLES <START>
+|--------------------------------------------------
+*/
+
+//-- Website colors
+$color-primary: #07073d;
+$color-grey: #eae8eb;
+$color-pink :#ff919f;
+
+//-- underline
+$line: 1px solid rgba($color-grey, .4);
+
+//-- Shadows
+$shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3);
+$shadow-light: 0 2rem 5rem rgba(0,0,0, .06);
+
+//-- Media query breakpoints
+$bp-gig: 100em;    // 1600px
+// $bp-huge: 75em;    // 1200px
+$bp-huge: 68.75em;   // 1100px
+$bp-large: 62.5em;   // 1000px
+$bp-medium: 56.25em;   // 900px
+$bp-small: 37.5em;   // 600px
+$bp-tiny: 31.25em;   // 500px
+
+$b1600: 100em;
+$b1200: 75em;
+$b1100: 68.75em;
+$b1000: 62.5em;
+$b900: 56.25em;
+$b800: 50em;
+$b700: 43.75em;
+$b600: 37.5em;
+$b500: 31.25em;
+
+/**
+|--------------------------------------------------
+| VARIABLES <END>
+|--------------------------------------------------
+*/
+
+
+
+/**
+|--------------------------------------------------
+| ANIMATIONS <START>
+|--------------------------------------------------
+*/
+
+//--- Custom AOS Animations <START> ---//
+[data-aos="fade-in-up"] {
+  opacity: 0;
+  transform: translateY(1rem);
+  transition-property: opacity, transform;
+  transform-origin: 0 100%;
+  
+  &.aos-animate {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+//--- Custom AOS Animations <END> ---//
+
+
+//--- Main Title Animation <START> ---//
+[data-aos="line-before"] {
+  width: 0;
+  transition-property: width;
+
+  &.aos-animate {
+    width: calc(100% - .9rem);
+  }
+}
+
+[data-aos="line-after"] {
+  opacity: 0;
+  transform: translate(-.8rem);
+
+  &.aos-animate {
+    opacity: 1;
+    transform: translate(0rem);
+  }
+}
+//--- Main Title Animation <END> ---//
+
+
+//--- Work Image <START> ---//
+[data-aos="clip-path--left"] {
+  clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%);
+  transform: scaleX(.85);
+  transform-origin: left;
+  
+  &.aos-animate {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    transform: scaleX(1);    
+  }
+}
+
+[data-aos="clip-path--right"] {
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+  transform: scaleX(.85);
+  transform-origin: right;
+  
+  &.aos-animate {
+    transform: scaleX(1);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+//--- Work Image <END> ---//
+
+
+//--- Keyframes Animations <START> ---//
+@keyframes moveInBottom {
+  0% {
+      opacity: 0;
+      transform: translateY(2rem);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
+@keyframes moveInBottom2 {
+  0% {
+      opacity: 0;
+      transform: translateY(3rem);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+//--- Keyframes Animations <END> ---//
+
+/**
+|--------------------------------------------------
+| ANIMATIONS <END>
+|--------------------------------------------------
+*/

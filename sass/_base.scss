@@ -1,0 +1,98 @@
+//--- FONTS <start> ---//
+
+ @font-face {
+  font-family: 'MTTMilano';
+  src: url('../fonts/MTTMilano-Regular.eot');
+  src: local('MTTMilano Regular'), local('MTTMilano-Regular'),
+      url('../fonts/MTTMilano-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/MTTMilano-Regular.woff') format('woff'),
+      url('../fonts/MTTMilano-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MTTMilano';
+  src: url('../fonts/MTTMilano-Medium.eot');
+  src: local('MTTMilano Medium'), local('MTTMilano-Medium'),
+      url('../fonts/MTTMilano-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/MTTMilano-Medium.woff') format('woff'),
+      url('../fonts/MTTMilano-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'MTTMilano';
+    src: url('../fonts/MTTMilano-Bold.eot');
+    src: local('MTTMilano Bold'), local('MTTMilano-Bold'),
+        url('../fonts/MTTMilano-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MTTMilano-Bold.woff') format('woff'),
+        url('../fonts/MTTMilano-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+//--- FONTS <end> ---//
+
+
+
+//--- BASE SETTINGS <start> ---//
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+ box-sizing: border-box;
+ font-size: 62.5%; // 1rem = 10px // 10px/16px = 62.5%
+  
+  // @media only screen and (max-width: $bp-large) {
+  //   font-size: 50%;
+  // }
+
+  @media only screen and (max-width: $bp-huge) {
+    font-size: 60%;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 56.25%;
+  }
+  // @media only screen and (max-width: $bp-small) {
+    // font-size: 50%;
+  // }
+  @media only screen and (min-width: $bp-gig) {
+    font-size: 75%;
+  }
+}
+
+body {
+  font-family: "MTTMilano", sans-serif;
+  font-size: 1.8rem;
+	font-weight: 400;
+  line-height: 1.5;
+  color: $color-grey;
+  background-color:  $color-primary;
+  
+  //testing
+  min-height: 100vh;
+}
+
+.test {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+//--- BASE SETTINGS <start> ---//
+
+
+
+
+

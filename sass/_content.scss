@@ -1,0 +1,606 @@
+
+// ▣▣▣▣▣ INDEX <START> ▣▣▣▣▣
+// 
+// ▨ REUSABLE COMPONENTS
+//    ► Main title
+// 
+//    ► Buttons 
+//          → btn-primary
+//          → btn-secondary
+// 
+//    ► background video
+// 
+// 
+// ▧ PAGE COMPONENTS
+//    ► Header 
+//          → title
+//          → button
+//          
+//    ► About  
+//          → paragraph container
+//          → paragraph item
+// 
+//    ► Work 
+//          → work title
+//          → image-text ⇩
+//              ◽ image-wrapper
+//              ◽ content-wrapper
+//          → tags
+// 
+//    ► Contact 
+//          → btn email
+//          → btn number
+//          → icons 
+//              ◽ container
+//              ◽ link
+//              ◽ item
+//          → copyright
+// 
+// ▣▣▣▣▣ INDEX <END> ▣▣▣▣▣
+
+
+/**
+|--------------------------------------------------
+| REUSABLE COMPONENTS <START>
+|--------------------------------------------------
+*/
+
+//--- Main title <START> ---//
+.main-title {
+  &__wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  &__inner {
+    font-size: 6rem;
+    font-weight: 400;
+    line-height: 100%;
+    position: relative;
+    display: inline-block;
+
+    @media only screen and (max-width: $b900) {
+      font-size: 4rem;
+    }
+    @media only screen and (max-width: $b600) {
+      font-size: 3rem;
+    }
+  }
+
+//-- Main Title Line Animation 
+  &__animation {
+    position: absolute;
+    height: .4rem;
+    bottom: -1.4rem;
+    background-color: currentColor;
+  
+    &-before {
+      left: 0;
+      border-radius: .15rem;
+    }
+
+    &-after {
+      width: .45rem;
+      border-radius: 40%;
+      right: 0;
+    }
+  }
+}
+//--- Main title <END> ---//
+
+
+//--- Buttons <START> ---//
+.btn-primary {
+  &:link,
+  &:visited {
+    padding: 1.3rem 6rem;
+    font-size: 3rem;
+    font-weight: 600;
+    text-decoration: none;
+    // display: inline-block;
+    // background-image: linear-gradient(38deg, transparent 0%, transparent 50%, $color-grey 50%);
+    background-size: 250%;
+    transition: all .4s;
+
+    @media only screen and (max-width: $b600) {
+      font-size: 2rem;
+      padding: 1.2rem 5rem;
+    }
+  }
+
+  &--light {
+    color: $color-grey;
+    border: 1px solid $color-grey;
+    background-image: linear-gradient(38deg, transparent 0%, transparent 50%, $color-grey 50%);
+    
+    &:hover {
+      background-position: 100%;
+      color: $color-primary;
+    }
+  }
+
+  &--dark {
+    color: black;
+    border: 1px solid black;
+    background-image: linear-gradient(70deg, transparent 0%, transparent 50%, black 50%);
+
+    &:hover {
+      background-position: 100%;
+      color: #fff;
+      fill: #fff;
+    }
+  }
+
+  &--animated {
+    animation: moveInBottom .8s ease-out .9s 1 backwards;
+  }
+}
+
+.btn-secondary {
+  &:link,
+  &:visited {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: $color-grey;
+    transition: color .2s ease-in-out .05s;
+    line-height: 100%;
+  }
+
+  &::before,
+  &::after {
+    content: "";  
+    position: absolute;
+    height: .2rem;
+    bottom: -.6rem;
+    background-color: $color-grey;
+  }
+  
+  &::before { 
+    left: 0;
+    width: 0;
+    border-radius: .1rem;
+    transition: width .2s ease-in-out .05s;
+  }
+
+  &::after {
+    height: .22rem;
+    width: .25rem;
+    border-radius: 40%;  
+    right: 0;
+    opacity: 0;
+    transform: translate(-.8rem);
+    transition: opacity 0s linear .2s, transform .05s ease-out .18s;
+  }
+
+  &:hover {
+    color: $color-pink;
+    
+    &::before {
+      background-color: $color-pink;
+      width: calc(100% - .6rem);
+    }
+    
+    &::after { 
+      opacity: 1;
+      transform: translate(0rem);
+      background-color: $color-pink;
+    }
+  }
+}
+//--- Buttons <END> ---//
+
+
+//--- Background Video <START> ---//
+.bg-video {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  // because the video is overflowing the padding
+  // overflow: hidden; 
+
+  &__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
+  }
+}
+//--- Background Video <END> ---//
+
+/**
+|--------------------------------------------------
+| REUSABLE COMPONENTS <END>
+|--------------------------------------------------
+*/
+
+
+
+
+/**
+|--------------------------------------------------
+| PAGE COMPONENTS <START>
+|--------------------------------------------------
+*/
+
+//--- HEADER SECTION <START> ---//
+.header {
+  &__title {
+    height: 30rem;
+    margin-bottom: 8rem;
+
+    @media only screen and (max-width: $b600) {
+      margin-right: auto;
+      margin-left: auto;
+      width: 410px;
+      height: 27rem;
+      // margin-bottom: 6rem;
+    }
+    
+    @media only screen and (max-width: $b500) {
+      margin-right: 0;
+      margin-left: 0;
+      width: auto;
+      margin-top: 5rem;
+      height: 25rem;
+    }
+
+
+    & > * {
+      display: block;
+      text-shadow: 0 1rem 3rem rgba(0,0,0 , .6);
+    }
+    
+    &-1 {
+      font-size: 5.5rem;
+      font-weight: 600;
+      // line-height: 1.6;
+      // margin-bottom: .4rem;
+      animation: moveInBottom2 .7s ease-out backwards .05s;
+
+      @media only screen and (max-width: $b700) {
+        font-size: calc(5.5rem * .8);
+      }
+
+      @media only screen and (max-width: $b500) {
+        font-size: calc(5.5rem * .65);
+      }
+    }
+
+    &-2 {
+      font-size: 8rem;
+      font-weight: 400;
+      animation: moveInBottom .7s ease-out backwards;
+      animation-delay: .4s;
+      margin-bottom: 2rem;
+
+      @media only screen and (max-width: $b700) {
+        font-size: calc(8rem * .8);
+      }
+      @media only screen and (max-width: $b500) {
+        font-size: calc(8rem * .65);
+      }
+    }
+
+    &-3 {
+      font-size: 3rem;
+      font-weight: 600;
+      // line-height: 2.9;
+
+      @media only screen and (max-width: $b700) {
+        font-size: calc(3rem * .8);
+      }   
+      @media only screen and (max-width: $b500) {
+        font-size: calc(3rem * .7);
+      }
+    }
+  }
+
+  &__btn {
+    align-self: center;
+    // margin-top: auto;
+  }
+}
+//--- HEADER SECTION <END> ---//
+
+
+//--- ABOUT SECTION <START> ---//
+
+.about-title {
+  margin-bottom: 8rem;
+
+  @media only screen and (max-width: $b700) {
+    margin-bottom: 6rem;   
+  }
+}
+.paragraph {
+
+  &__container {
+    column-width: auto;
+    column-count: 2;
+    column-gap: 6rem;
+    padding: 0px;
+
+    @media only screen and (max-width: $b700) {
+      column-count: 1;      
+      padding: 0px 1.5rem;
+    }
+  }
+  
+  &__item {
+    margin: 0px 0px 3rem;
+  }
+}
+//--- ABOUT SECTION <END> ---//
+
+
+//--- WORK SECTION <START> ---//
+.work__title {
+  margin-left: 6.5rem;
+  margin-bottom: 14rem;
+
+  @media only screen and (max-width: $b900) {
+    margin-left: 2rem;
+    margin-bottom: 10rem;
+  }
+}
+
+.image-text {
+  display: flex;
+  flex-direction: row; // >>> media query
+  flex-wrap: nowrap;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  @media only screen and (max-width: $b700) {
+    flex-direction: column;
+  }
+  
+  &--position-right {
+    @media only screen and (max-width: $b700) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  // &--position-left {
+  //   & &__content-wrapper &__content-wrapper--inner &__content-title {
+  //     width: 75%;
+  //     text-align: right;
+  //   }
+  // }
+  
+  &--position-left &__content-wrapper &__content-wrapper--inner &__content-title {
+    width: 75%;
+    text-align: right;
+    
+    @media only screen and (max-width: $b700) {
+      width: auto;
+      text-align: initial;
+    }
+  }
+  
+  // &--position-right {
+
+  // }
+
+  &__image-wrapper {
+    flex: 1 1 0%; 
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;  
+    cursor: pointer;
+    
+    @media only screen and (max-width: $b700) {
+      // height: 100%;
+      flex: 1 1 auto;
+      // width: 90%;
+      margin: 0 auto 3rem;
+      // margin-bottom: 4rem;
+    }
+  
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    // position: absolute; //
+    // left: 0px; //
+    // top: 0px; //
+    // overflow: hidden;
+    transition: transform .5s ease-out;
+    // filter: blur(.1rem) brightness(90%); //
+
+    @media only screen and (max-width: $b700) {
+      // height: auto;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__under-construction {
+    position: absolute; //
+    left: 0px; //
+    top: 0px; //
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    filter: drop-shadow(0 2rem 4rem  rgba(0,0,0, .5));
+  }
+
+
+  &__content-wrapper {
+    flex: .8 .1 0%; // >>> Media query
+    margin-top: 0px; // >>>> media query
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    // margin-top: 1.5rem; <<<  media query
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+
+    &--inner {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+
+      @media only screen and (max-width: $b700) {
+        width: 100%;
+        align-items: center;
+      }
+    }
+  }
+
+  &__content-title {
+    margin-bottom: 2rem;
+    width: 90%;
+
+    @media only screen and (max-width: $b700) {
+      width: auto;
+    }
+
+    @media only screen and (max-width: $b500) {
+      margin-bottom: 1rem;
+    }
+
+    & h2 {
+      font-size: 6rem;
+      font-weight: 500;
+    }
+  }
+
+  &__content-description {
+    margin-bottom: 4rem;
+    max-width: 40rem;
+  }
+
+  &__btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+    justify-content: space-around;
+
+    @media only screen and (max-width: $b700) {
+      justify-content: center;
+    }
+  }
+
+  &__btn-item {
+    &:link,
+    &:visited {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      padding: 1rem 2rem;
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+
+    &:hover {
+      fill: #fff;
+    }
+
+    &-icon {
+      margin-left: .7rem;
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+  }
+}
+
+.tags {
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    @media only screen and (max-width: $b700) {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: .6rem .6rem;
+    border-radius: 1.2rem;
+    color: $color-grey;
+    background-color: black;
+    margin-bottom: .6rem;
+    &:not(:last-child) {
+      margin-right: .6rem;
+    }
+
+    & p {
+      padding: .6rem 1rem;
+      border: .2rem dashed $color-grey;
+      border-radius: .8rem;
+    }
+  }
+}
+//--- WORK SECTION <END> ---//
+
+
+//--- CONTACT SECTION <START> ---//
+.contact {
+  &__title{
+    margin-bottom: 8rem;
+  }
+
+  &__btn-email{
+      margin-bottom: 2rem;
+  }
+
+  &__btn-number {
+      letter-spacing: .22rem;
+      margin-bottom: 9rem;
+  }
+
+  &__icon {
+    &-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: 14.5rem;
+      margin-bottom: 3rem;    
+    }
+    
+    &-link{
+      &:link,
+      &:visited {
+        fill: $color-grey;
+        transition: fill .2s;
+      }
+
+      &:hover {
+        fill: $color-pink;
+      }
+    }
+
+    &-item {
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+}
+
+.copyright {
+  margin-top: 12rem;
+}
+//--- CONTACT SECTION <END> ---//
+
+/**
+|--------------------------------------------------
+| PAGE COMPONENTS <END>
+|--------------------------------------------------
+*/

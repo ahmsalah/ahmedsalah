@@ -1,0 +1,231 @@
+/**
+|--------------------------------------------------
+| NAVIGATION <START>
+|--------------------------------------------------
+*/
+
+.navigation {
+
+  &__checkbox {
+    display: none;
+  }
+
+//--- Styling the blue circle ---//
+  &__button {
+    background-color: $color-primary;
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    border-radius: 50%;
+    z-index: 200;
+    box-shadow: 0 1rem 3rem rgba($color-primary, .1);
+    text-align: center;
+    cursor: pointer;
+
+    @media only screen and (max-width: $bp-large) {
+      top: 4rem;
+      right: 3.5rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      top: 3rem;
+      right: 3rem;
+    }
+  }
+
+  //--- circle that expands on click on label elm ---//
+  &__background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%; //circle
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    background-color: $color-primary;
+    z-index: 100;
+    transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+
+    @media only screen and (max-width: $bp-large) {
+      top: 4.5rem;
+      right: 4.0rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
+  }
+
+  //--- Items list div elm ---//
+  &__nav {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0; // or left: 0;
+    z-index: 150;
+
+    opacity: 0;
+    visibility: hidden; // or use width: 0;
+    transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  //--- Items list ul elm ---//
+  &__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+    list-style: none;
+    text-align: center;
+    width: 100%;
+  }
+
+
+  //--- Items list li elms ---//
+  &__item {
+    margin: 1.5rem;
+    padding: 2rem 3rem;
+  }
+  
+  //--- Items list a elms ---//
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      position: relative;
+      font-size: 5rem;
+      font-weight: 500;
+      color: $color-grey;
+      text-decoration: none;
+      transition: color .2s ease-in-out .05s;
+      line-height: 100%;
+    }
+
+    &::before,
+    &::after {
+      content: "";  
+      position: absolute;
+      height: .4rem;
+      bottom: -1rem;
+      background-color: $color-grey;
+    }
+    
+    &::before { 
+      left: 0;
+      width: 0;
+      border-radius: .15rem;
+      transition: width .2s ease-in-out .05s;
+    }
+
+    &::after {
+      height: .4rem;
+      width: .4rem;
+      border-radius: 50%;
+      right: 0;
+      opacity: 0;
+      transform: translate(-.8rem);
+      transition: opacity 0s linear .2s, transform .05s ease-out .18s;
+    }
+
+    &:hover {
+      color: $color-pink;
+      
+      &::before {
+        background-color: $color-pink;
+        width: calc(100% - .8rem);
+      }
+
+      &::after { 
+        opacity: 1;
+        transform: translate(0rem);
+        background-color: $color-pink;
+      }
+    }
+  }
+
+
+
+  //--- FUNCTIONALITY ---//
+  //---  When checkbox is checked scale the blue circle 80 times 
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+
+  //--- When checkbox is checked make list div elm visible
+  &__checkbox:checked ~ &__nav {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  //--- 3 lines ICON ---//
+  &__icon {
+    position: relative;
+    margin-top: 3.5rem;
+
+    //--- styling the icon & before & after pseudo elms
+    &, // the icon elm itself
+    &::before,
+    &::after {
+      width: 2.5rem;
+      height: 3px;
+      background-color: $color-grey;
+      display: inline-block;
+      border-radius: 1.5px;
+    }
+
+    //--- styling only the before & after pseudo elms
+    &::before,
+    &::after {
+      content: "";  
+      position: absolute;
+      left: 0;
+      transition: transform .2s;
+    }
+    
+    &::before { top: -.9rem; }
+    &::after { top: .9rem; }
+  }
+
+  &__button:hover &__icon::before {
+    top: -1.1rem
+  }
+  &__button:hover &__icon::after {
+    top: 1.1rem
+  }
+
+  //--- when the checkbox is selected, select the child of its sibling
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    transform: rotate(235deg);
+    top: 0;
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    transform: rotate(-235deg);
+    top: 0;
+  }  
+
+  &__checkbox:checked + &__button:hover &__icon::before {
+    transform: rotate(135deg);
+    top: 0;
+    transition: all .2s
+  }
+
+  &__checkbox:checked + &__button:hover &__icon::after {
+    transform: rotate(-135deg);
+    top: 0;
+    transition: all .2s
+  }  
+}
+
+/**
+|--------------------------------------------------
+| NAVIGATION <END>
+|--------------------------------------------------
+*/

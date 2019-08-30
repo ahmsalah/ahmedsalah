@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="79px" height="775px" viewBox="0 0 79 775" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>touchfinger</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="touchfinger" transform="translate(2.000000, 2.000000)">
+            <path d="M74.809,770.527344 C74.809,770.527344 74.809,266.564042 74.809,164.476563 C74.809,122.202375 74.809,37.654 74.809,37.654 C74.809,17.134 58.174,0.5 37.655,0.5 C17.135,0.5 0.5,17.134 0.5,37.654 L0.5,770.527344 L74.809,770.527344 Z" id="Fill-1" stroke="#979797"></path>
+            <path d="M74.809,770.739 L74.809,37.654 C74.809,17.134 58.174,0.5 37.655,0.5 C17.135,0.5 0.5,17.134 0.5,37.654 L0.5,770.739 L74.809,770.739 Z" id="Stroke-3" stroke="#FFFFFF" stroke-width="3.5" fill="#07063D"></path>
+            <path d="M14.8972,36.8939 L14.8972,72.0739" id="Stroke-5" stroke="#FFFFFF" stroke-width="3.5"></path>
+            <path d="M60.4117,41.8219 L60.4117,73.0019" id="Stroke-7" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"></path>
+            <path d="M60.4117,71.8886 C60.4117,84.4566 50.2227,94.6456 37.6547,94.6456 C25.0857,94.6456 14.8977,84.4566 14.8977,71.8886" id="Stroke-9" stroke="#FFFFFF" stroke-width="3.5"></path>
+            <path d="M59.6619,34.8219 C58.1428,34.8219 56.9119,33.591 56.9119,32.0719 C56.9119,30.5528 58.1428,29.3219 59.6619,29.3219 C61.181,29.3219 62.4119,30.5528 62.4119,32.0719 C62.4119,33.591 61.181,34.8219 59.6619,34.8219 Z" id="Fill-15" fill="#FFFFFF"></path>
+            <path d="M14.8972,37.1585 C14.8972,24.5905 25.0862,14.4015 37.6542,14.4015 C40.3422,14.4015 42.9212,14.8675 45.3152,15.7225" id="Stroke-17" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"></path>
+        </g>
+    </g>
+</svg>
