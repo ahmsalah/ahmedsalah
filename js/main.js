@@ -71,7 +71,7 @@ $(document).ready(function () {
   var typed = new Typed(".js-typed", {
     strings: ["A Front-end Web Developer based in Cairo."],
     typeSpeed: 70,
-    startDelay: 1100,
+    startDelay: 1300,
     showCursor: false
   })
 

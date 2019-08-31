@@ -78,21 +78,21 @@
 @font-face {
   font-family: 'MTTMilano';
   src: url("../fonts/MTTMilano-Regular.eot");
-  src: local("MTTMilano Regular"), local("MTTMilano-Regular"), url("../fonts/MTTMilano-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/MTTMilano-Regular.woff") format("woff"), url("../fonts/MTTMilano-Regular.ttf") format("truetype");
+  src: url("../fonts/MTTMilano-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/MTTMilano-Regular.woff") format("woff"), url("../fonts/MTTMilano-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'MTTMilano';
   src: url("../fonts/MTTMilano-Medium.eot");
-  src: local("MTTMilano Medium"), local("MTTMilano-Medium"), url("../fonts/MTTMilano-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/MTTMilano-Medium.woff") format("woff"), url("../fonts/MTTMilano-Medium.ttf") format("truetype");
+  src: url("../fonts/MTTMilano-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/MTTMilano-Medium.woff") format("woff"), url("../fonts/MTTMilano-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: 'MTTMilano';
   src: url("../fonts/MTTMilano-Bold.eot");
-  src: local("MTTMilano Bold"), local("MTTMilano-Bold"), url("../fonts/MTTMilano-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/MTTMilano-Bold.woff") format("woff"), url("../fonts/MTTMilano-Bold.ttf") format("truetype");
+  src: url("../fonts/MTTMilano-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/MTTMilano-Bold.woff") format("woff"), url("../fonts/MTTMilano-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal; }
 
@@ -126,10 +126,6 @@ body {
   color: #eae8eb;
   background-color: #07073d;
   min-height: 100vh; }
-
-.test {
-  font-size: 1.6rem;
-  font-weight: 400; }
 
 /**
 |--------------------------------------------------
@@ -268,7 +264,8 @@ body {
   font-weight: 600;
   text-decoration: none;
   background-size: 250%;
-  transition: all .4s; }
+  transition: all .4s;
+  border: 1px solid currentColor; }
   @media only screen and (max-width: 37.5em) {
     .btn-primary:link, .btn-primary:visited {
       font-size: 2rem;
@@ -276,7 +273,6 @@ body {
 
 .btn-primary--light {
   color: #eae8eb;
-  border: 1px solid #eae8eb;
   background-image: linear-gradient(38deg, transparent 0%, transparent 50%, #eae8eb 50%); }
   @media only screen and (max-width: 31.25em) {
     .btn-primary--light {
@@ -287,7 +283,6 @@ body {
 
 .btn-primary--dark {
   color: black;
-  border: 1px solid black;
   background-image: linear-gradient(70deg, transparent 0%, transparent 50%, black 50%); }
   .btn-primary--dark:hover {
     background-position: 100%;
