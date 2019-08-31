@@ -34,6 +34,7 @@ $b800: 50em;
 $b700: 43.75em;
 $b600: 37.5em;
 $b500: 31.25em;
+$b400: 25em;
 
 /**
 |--------------------------------------------------
@@ -52,7 +53,7 @@ $b500: 31.25em;
 //--- Custom AOS Animations <START> ---//
 [data-aos="fade-in-up"] {
   opacity: 0;
-  transform: translateY(2rem);
+  transform: translateY(1.5rem);
   transition-property: opacity, transform;
   transform-origin: 0 100%;
   
@@ -71,6 +72,9 @@ $b500: 31.25em;
 
   &.aos-animate {
     width: calc(100% - .9rem);
+    @media only screen and (max-width: $b500) {
+      width: calc(100% - .7rem);
+    }
   }
 }
 

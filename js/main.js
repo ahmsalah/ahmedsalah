@@ -43,7 +43,7 @@ $(document).ready(function () {
     e.preventDefault(); 
     var targetElement = $(this).attr("href");
     var targetPosition = $(targetElement).offset().top
-    $('html, body').animate({ scrollTop: (targetElement === '#work' ? targetPosition + 110 : targetPosition + 40) }, 1500, "easeInOutExpo")
+    $('html, body').animate({ scrollTop: (targetElement === '#work' ? targetPosition + 30 : targetPosition + 20) }, 1500, "easeInOutExpo")
   });
   
   // var target =   $('a[href*="#"]')
@@ -57,7 +57,7 @@ $(document).ready(function () {
 
   AOS.init({
     easing: 'ease',
-    once: true,
+    // once: true,
     duration: 1800
   })
 

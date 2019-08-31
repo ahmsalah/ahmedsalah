@@ -27,7 +27,7 @@
 */
 
 .header {
-  padding: 14rem 4.5rem 14rem;
+  padding: 12rem 4.5rem 14rem;
   position: relative;	
   background: linear-gradient(to bottom right, rgba($color-primary, .7), rgba($color-primary, .4));
   
@@ -80,16 +80,16 @@
 */
 
 .work {
-  padding: 15rem 4.5rem 14.9rem;
+  padding: 15rem 4.5rem;
   background-color: #fff;
   color: black;
   
   @media only screen and (max-width: $b700) {
-    padding: 12rem 1.5rem 12rem;
+    padding: 15rem 2.5rem;
   }
 
   @media only screen and (max-width: $b500) {
-    padding: 12rem 1.5rem 12rem;
+    padding: 13rem 1.5rem 12rem;
   }
 
   &__container {
@@ -113,7 +113,7 @@
 */
 
 .contact {
-  padding: 14rem 4.5rem 1.5rem;
+  padding: 12rem 4.5rem 1.5rem;
 
   &__container {
     display: flex;

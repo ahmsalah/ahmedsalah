@@ -50,6 +50,7 @@
   &__wrapper {
     position: relative;
     display: inline-block;
+
   }
 
   &__inner {
@@ -57,12 +58,14 @@
     font-weight: 400;
     line-height: 100%;
     position: relative;
-    display: inline-block;
 
     @media only screen and (max-width: $b900) {
+      font-size: 5rem;
+    }
+    @media only screen and (max-width: $b700) {
       font-size: 4rem;
     }
-    @media only screen and (max-width: $b600) {
+    @media only screen and (max-width: $b500) {
       font-size: 3rem;
     }
   }
@@ -73,6 +76,14 @@
     height: .4rem;
     bottom: -1.4rem;
     background-color: currentColor;
+    @media only screen and (max-width: $b900) {
+      bottom: -.9rem;
+      height: .35rem;
+    }
+    @media only screen and (max-width: $b500) {
+      bottom: -.7rem;
+      height: .22rem;
+    }
   
     &-before {
       left: 0;
@@ -81,8 +92,13 @@
 
     &-after {
       width: .45rem;
-      border-radius: 40%;
       right: 0;
+      border-radius: 40%;
+      @media only screen and (max-width: $b500) {
+        border-radius: .1rem;
+        width: .30rem;
+
+      }  
     }
   }
 }
@@ -313,7 +329,7 @@
 
 //--- ABOUT SECTION <START> ---//
 
-.about-title {
+.about__title {
   margin-bottom: 8rem;
 
   @media only screen and (max-width: $b700) {
@@ -344,7 +360,7 @@
 //--- WORK SECTION <START> ---//
 .work__title {
   margin-left: 6.5rem;
-  margin-bottom: 14rem;
+  margin-bottom: 12rem;
 
   @media only screen and (max-width: $b900) {
     margin-left: 2rem;
@@ -353,7 +369,13 @@
 
   @media only screen and (max-width: $b600) {
     margin-left: 1rem;
-    font-size: 2.5rem;
+    margin-bottom: 9rem;
+  }
+
+  & h1 {
+    @media only screen and (max-width: $b600) {
+      font-size: 2.5rem;
+    }  
   }
 }
 
@@ -366,6 +388,8 @@
 
   @media only screen and (max-width: $b700) {
     flex-direction: column;
+    padding-left: .5rem;
+    padding-right: .5rem;  
   }
   
   &--position-right {
@@ -454,9 +478,6 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    // margin-top: 1.5rem; <<<  media query
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
 
     &--inner {
       width: 80%;
@@ -491,17 +512,17 @@
   &__content-description {
     margin-bottom: 4rem;
     max-width: 40rem;
+
+    @media only screen and (max-width: $b500) {
+      max-width: 31rem;
+    }
   }
 
   &__btn-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin-bottom: 4rem;
-    justify-content: space-around;
-
-    @media only screen and (max-width: $b700) {
-      justify-content: center;
-    }
   }
 
   &__btn-item {
@@ -512,7 +533,10 @@
       font-size: 1.5rem;
       padding: 1rem 2rem;
       &:not(:last-child) {
-        margin-right: 1rem;
+        margin-right: 2rem;
+        @media only screen and (max-width: $b700) {
+          margin-right: 1rem;
+        }        
       }
     }
 
@@ -564,9 +588,12 @@
   &__title{
     margin-bottom: 12rem;
     // margin-top: 12rem;
-    
-    @media only screen and (max-width: $b600) {
-      font-size: 4rem;
+    & h1 {
+      margin-bottom: -.1px;
+
+      @media only screen and (max-width: $b600) {
+        font-size: 4rem;
+      }
     }
   }
 
