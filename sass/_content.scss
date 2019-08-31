@@ -131,7 +131,7 @@
     background-image: linear-gradient(38deg, transparent 0%, transparent 50%, $color-grey 50%);
 
     @media only screen and (max-width: $b500) {
-      background-image: linear-gradient(70deg, transparent 0%, transparent 50%, $color-grey 50%);
+      background-image: linear-gradient(30deg, transparent 0%, transparent 50%, $color-grey 50%);
     }
     
     &:hover {
