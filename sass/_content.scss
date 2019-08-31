@@ -238,7 +238,7 @@
       margin-left: auto;
       width: 410px;
       height: 27rem;
-      // margin-bottom: 6rem;
+      margin-bottom: 6rem;
     }
     
     @media only screen and (max-width: $b500) {
@@ -303,6 +303,9 @@
   &__btn {
     align-self: center;
     // margin-top: auto;
+    @media only screen and (max-width: $b700) {
+      margin-bottom: 6rem;
+    }
   }
 }
 //--- HEADER SECTION <END> ---//
@@ -346,6 +349,11 @@
   @media only screen and (max-width: $b900) {
     margin-left: 2rem;
     margin-bottom: 10rem;
+  }
+
+  @media only screen and (max-width: $b600) {
+    margin-left: 1rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -554,16 +562,21 @@
 //--- CONTACT SECTION <START> ---//
 .contact {
   &__title{
-    margin-bottom: 8rem;
+    margin-bottom: 12rem;
+    // margin-top: 12rem;
+    
+    @media only screen and (max-width: $b600) {
+      font-size: 4rem;
+    }
   }
 
   &__btn-email{
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
   }
 
   &__btn-number {
       letter-spacing: .22rem;
-      margin-bottom: 9rem;
+      margin-bottom: 10rem;
   }
 
   &__icon {
@@ -595,7 +608,7 @@
 }
 
 .copyright {
-  margin-top: 12rem;
+  margin-top: 16rem;
 }
 //--- CONTACT SECTION <END> ---//
 

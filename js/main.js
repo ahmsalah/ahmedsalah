@@ -31,13 +31,23 @@ $(document).ready(function () {
   // });
 
 
+  // $('a[href*="#"]').on('click', function (e) {
+  //   e.preventDefault(); 
+  //   var targetElement = $(this).attr("href");
+  //   var targetPosition = $(targetElement).offset().top
+  //   $('html, body').animate({ scrollTop: targetPosition + 50 }, 1500, "easeInOutExpo")
+  // });
+
+  
   $('a[href*="#"]').on('click', function (e) {
     e.preventDefault(); 
     var targetElement = $(this).attr("href");
     var targetPosition = $(targetElement).offset().top
-    $('html, body').animate({ scrollTop: targetPosition + 20 }, 1500, "easeInOutExpo")
+    $('html, body').animate({ scrollTop: (targetElement === '#work' ? targetPosition + 110 : targetPosition + 40) }, 1500, "easeInOutExpo")
   });
-
+  
+  // var target =   $('a[href*="#"]')
+  // target === 'a[href="#work"]' ? targetPosition + 250 : targetPosition + 50
 
   /**
   |--------------------------------------------------

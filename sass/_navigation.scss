@@ -87,6 +87,9 @@
   //--- Items list li elms ---//
   &__item {
     margin: 1.5rem;
+    @media only screen and (max-width: $b500) {
+      margin: 1rem;
+    }
     padding: 2rem 3rem;
   }
   
@@ -102,6 +105,9 @@
       text-decoration: none;
       transition: color .2s ease-in-out .05s;
       line-height: 100%;
+      @media only screen and (max-width: $b500) {
+        font-size: 4rem;
+      }
     }
 
     &::before,

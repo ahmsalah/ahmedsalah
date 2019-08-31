@@ -52,7 +52,7 @@ $b500: 31.25em;
 //--- Custom AOS Animations <START> ---//
 [data-aos="fade-in-up"] {
   opacity: 0;
-  transform: translateY(1rem);
+  transform: translateY(2rem);
   transition-property: opacity, transform;
   transform-origin: 0 100%;
   
