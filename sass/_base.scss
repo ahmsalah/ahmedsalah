@@ -49,41 +49,62 @@
 
 //--- FONTS <start> ---//
 
-@font-face {
-  font-family: 'MTTMilano';
-  src: url('../fonts/MTTMilano-Regular.eot');
-  src: url('../fonts/MTTMilano-Regular.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/MTTMilano-Regular.woff') format('woff'),
-      url('../fonts/MTTMilano-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: 'MTTMilano';
+//   src: url('../fonts/MTTMilano-Regular.eot');
+//   src: url('../fonts/MTTMilano-Regular.eot?#iefix') format('embedded-opentype'),
+//       url('../fonts/MTTMilano-Regular.woff') format('woff'),
+//       url('../fonts/MTTMilano-Regular.ttf') format('truetype');
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
 
 
-@font-face {
-  font-family: 'MTTMilano';
-  src: url('../fonts/MTTMilano-Medium.eot');
-  src: 
-      url('../fonts/MTTMilano-Medium.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/MTTMilano-Medium.woff') format('woff'),
-      url('../fonts/MTTMilano-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: 'MTTMilano';
+//   src: url('../fonts/MTTMilano-Medium.eot');
+//   src: 
+//       url('../fonts/MTTMilano-Medium.eot?#iefix') format('embedded-opentype'),
+//       url('../fonts/MTTMilano-Medium.woff') format('woff'),
+//       url('../fonts/MTTMilano-Medium.ttf') format('truetype');
+//   font-weight: 500;
+//   font-style: normal;
+// }
 
-@font-face {
-    font-family: 'MTTMilano';
-    src: url('../fonts/MTTMilano-Bold.eot');
-    src:
-        url('../fonts/MTTMilano-Bold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/MTTMilano-Bold.woff') format('woff'),
-        url('../fonts/MTTMilano-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: 'MTTMilano';
+//     src: url('../fonts/MTTMilano-Bold.eot');
+//     src:
+//         url('../fonts/MTTMilano-Bold.eot?#iefix') format('embedded-opentype'),
+//         url('../fonts/MTTMilano-Bold.woff') format('woff'),
+//         url('../fonts/MTTMilano-Bold.ttf') format('truetype');
+//     font-weight: bold;
+//     font-style: normal;
+// }
 
 //--- FONTS <end> ---//
+
+@font-face {
+  font-family: "MTTMilano";
+  src: url("https://d3kbi7897jm3al.cloudfront.net/fonts/340645_1_0.eot?#iefix") format("embedded-opentype"), url("https://d3kbi7897jm3al.cloudfront.net/fonts/340645_1_0.woff2") format("woff2"), url("https://d3kbi7897jm3al.cloudfront.net/fonts/340645_1_0.woff") format("woff"), url("https://d3kbi7897jm3al.cloudfront.net/fonts/340645_1_0.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+  @font-face {
+    font-family: "MTTMilano";
+    src: url("https://d3kbi7897jm3al.cloudfront.net/fonts/340645_0_0.eot?#iefix") format("embedded-opentype"), url("https://d3kbi7897jm3al.cloudfront.net/fonts/340645_0_0.woff2") format("woff2"), url("https://d3kbi7897jm3al.cloudfront.net/fonts/340645_0_0.woff") format("woff"), url("https://d3kbi7897jm3al.cloudfront.net/fonts/340645_0_0.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  @font-face {
+  font-family: "MTTMilano";
+  src: url("https://d3kbi7897jm3al.cloudfront.net/fonts/340645_4_0.eot?#iefix") format("embedded-opentype"), url("https://d3kbi7897jm3al.cloudfront.net/fonts/340645_4_0.woff2") format("woff2"), url("https://d3kbi7897jm3al.cloudfront.net/fonts/340645_4_0.woff") format("woff"), url("https://d3kbi7897jm3al.cloudfront.net/fonts/340645_4_0.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
 
 //--- BASE SETTINGS <start> ---//
 

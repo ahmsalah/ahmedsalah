@@ -76,25 +76,22 @@
 |--------------------------------------------------
 */
 @font-face {
-  font-family: 'MTTMilano';
-  src: url("../fonts/MTTMilano-Regular.eot");
-  src: url("../fonts/MTTMilano-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/MTTMilano-Regular.woff") format("woff"), url("../fonts/MTTMilano-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
+  font-family: "MTTMilano";
+  src: url("https://d3kbi7897jm3al.cloudfront.net/fonts/340645_1_0.eot?#iefix") format("embedded-opentype"), url("https://d3kbi7897jm3al.cloudfront.net/fonts/340645_1_0.woff2") format("woff2"), url("https://d3kbi7897jm3al.cloudfront.net/fonts/340645_1_0.woff") format("woff"), url("https://d3kbi7897jm3al.cloudfront.net/fonts/340645_1_0.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700; }
 
 @font-face {
-  font-family: 'MTTMilano';
-  src: url("../fonts/MTTMilano-Medium.eot");
-  src: url("../fonts/MTTMilano-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/MTTMilano-Medium.woff") format("woff"), url("../fonts/MTTMilano-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal; }
+  font-family: "MTTMilano";
+  src: url("https://d3kbi7897jm3al.cloudfront.net/fonts/340645_0_0.eot?#iefix") format("embedded-opentype"), url("https://d3kbi7897jm3al.cloudfront.net/fonts/340645_0_0.woff2") format("woff2"), url("https://d3kbi7897jm3al.cloudfront.net/fonts/340645_0_0.woff") format("woff"), url("https://d3kbi7897jm3al.cloudfront.net/fonts/340645_0_0.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600; }
 
 @font-face {
-  font-family: 'MTTMilano';
-  src: url("../fonts/MTTMilano-Bold.eot");
-  src: url("../fonts/MTTMilano-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/MTTMilano-Bold.woff") format("woff"), url("../fonts/MTTMilano-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal; }
+  font-family: "MTTMilano";
+  src: url("https://d3kbi7897jm3al.cloudfront.net/fonts/340645_4_0.eot?#iefix") format("embedded-opentype"), url("https://d3kbi7897jm3al.cloudfront.net/fonts/340645_4_0.woff2") format("woff2"), url("https://d3kbi7897jm3al.cloudfront.net/fonts/340645_4_0.woff") format("woff"), url("https://d3kbi7897jm3al.cloudfront.net/fonts/340645_4_0.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400; }
 
 * {
   margin: 0;
@@ -276,14 +273,14 @@ body {
   background-image: linear-gradient(38deg, transparent 0%, transparent 50%, #eae8eb 50%); }
   @media only screen and (max-width: 31.25em) {
     .btn-primary--light {
-      background-image: linear-gradient(30deg, transparent 0%, transparent 50%, #eae8eb 50%); } }
+      background-image: linear-gradient(42deg, transparent 0%, transparent 50%, #eae8eb 50%); } }
   .btn-primary--light:hover {
     background-position: 100%;
     color: #07073d; }
 
 .btn-primary--dark {
-  color: black;
-  background-image: linear-gradient(70deg, transparent 0%, transparent 50%, black 50%); }
+  color: #000;
+  background-image: linear-gradient(70deg, transparent 0%, transparent 50%, #000 50%); }
   .btn-primary--dark:hover {
     background-position: 100%;
     color: #fff;
@@ -565,7 +562,7 @@ body {
   padding: .6rem .6rem;
   border-radius: 1.2rem;
   color: #eae8eb;
-  background-color: black;
+  background-color: #000;
   margin-bottom: .6rem; }
   .tags__item:not(:last-child) {
     margin-right: .6rem; }
