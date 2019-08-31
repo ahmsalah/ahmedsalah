@@ -93,7 +93,8 @@
     &-after {
       width: .45rem;
       right: 0;
-      border-radius: 40%;
+      border-radius: .15rem;
+
       @media only screen and (max-width: $b500) {
         border-radius: .1rem;
         width: .30rem;
@@ -115,7 +116,7 @@
     text-decoration: none;
     // display: inline-block;
     // background-image: linear-gradient(38deg, transparent 0%, transparent 50%, $color-grey 50%);
-    background-size: 250%;
+    background-size: 280%;
     transition: all .4s;
 
     @media only screen and (max-width: $b600) {
