@@ -286,7 +286,7 @@ body {
   background-image: linear-gradient(38deg, transparent 0%, transparent 50%, #eae8eb 50%); }
   @media only screen and (max-width: 31.25em) {
     .btn-primary--light {
-      background-image: linear-gradient(42deg, transparent 0%, transparent 50%, #eae8eb 50%); } }
+      background-image: linear-gradient(60deg, transparent 0%, transparent 50%, #eae8eb 50%); } }
   .btn-primary--light:hover {
     background-position: 100%;
     color: #07073d; }
