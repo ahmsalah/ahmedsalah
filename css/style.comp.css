@@ -116,7 +116,7 @@ html {
       font-size: 56.25%; } }
   @media only screen and (min-width: 100em) {
     html {
-      font-size: 75%; } }
+      font-size: 80%; } }
 
 body {
   font-family: "MTTMilano", sans-serif;
@@ -267,7 +267,7 @@ body {
   font-size: 3rem;
   font-weight: 600;
   text-decoration: none;
-  background-size: 200%;
+  background-size: 250%;
   transition: all .4s; }
   @media only screen and (max-width: 37.5em) {
     .btn-primary:link, .btn-primary:visited {
@@ -278,6 +278,9 @@ body {
   color: #eae8eb;
   border: 1px solid #eae8eb;
   background-image: linear-gradient(38deg, transparent 0%, transparent 50%, #eae8eb 50%); }
+  @media only screen and (max-width: 31.25em) {
+    .btn-primary--light {
+      background-image: linear-gradient(70deg, transparent 0%, transparent 50%, #eae8eb 50%); } }
   .btn-primary--light:hover {
     background-position: 100%;
     color: #07073d; }

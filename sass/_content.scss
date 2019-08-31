@@ -116,7 +116,7 @@
     text-decoration: none;
     // display: inline-block;
     // background-image: linear-gradient(38deg, transparent 0%, transparent 50%, $color-grey 50%);
-    background-size: 200%;
+    background-size: 250%;
     transition: all .4s;
 
     @media only screen and (max-width: $b600) {
@@ -129,6 +129,10 @@
     color: $color-grey;
     border: 1px solid $color-grey;
     background-image: linear-gradient(38deg, transparent 0%, transparent 50%, $color-grey 50%);
+
+    @media only screen and (max-width: $b500) {
+      background-image: linear-gradient(70deg, transparent 0%, transparent 50%, $color-grey 50%);
+    }
     
     &:hover {
       background-position: 100%;
