@@ -57,7 +57,7 @@
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(2rem); }
+    transform: translateY(1.5rem); }
   100% {
     opacity: 1;
     transform: translate(0); } }
@@ -300,7 +300,7 @@ body {
     fill: #fff; }
 
 .btn-primary--animated {
-  animation: moveInBottom .8s ease-out .9s 1 backwards; }
+  animation: moveInBottom .9s ease 1.7s 1 backwards; }
 
 .btn-secondary:link, .btn-secondary:visited {
   display: inline-block;
@@ -397,8 +397,6 @@ body {
   .header__title-2 {
     font-size: 8rem;
     font-weight: 400;
-    animation: moveInBottom .7s ease-out backwards;
-    animation-delay: .4s;
     margin-bottom: 2rem; }
     @media only screen and (max-width: 43.75em) {
       .header__title-2 {
