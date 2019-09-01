@@ -263,7 +263,8 @@ body {
       font-size: 4rem; } }
   @media only screen and (max-width: 31.25em) {
     .main-title__inner {
-      font-size: 3rem; } }
+      font-size: 3rem;
+      font-weight: 600; } }
 
 .main-title__animation {
   position: absolute;
