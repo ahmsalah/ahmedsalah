@@ -440,7 +440,8 @@ body {
   width: 2.2rem;
   height: 3.5rem;
   border: 0.1rem solid #eae8eb;
-  border-radius: 1.2rem; }
+  border-radius: 1.2rem;
+  animation: nudge 1s linear infinite alternate; }
   .header__scroll:link:before, .header__scroll:visited:before, .header__scroll:focus:before, .header__scroll:active:before {
     position: absolute;
     content: "";
