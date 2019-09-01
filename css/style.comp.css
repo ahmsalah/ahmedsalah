@@ -60,7 +60,7 @@
     transform: translateY(1.5rem); }
   100% {
     opacity: 1;
-    transform: translate(0); } }
+    transform: translateY(0); } }
 
 @keyframes moveInBottom2 {
   0% {
@@ -68,7 +68,13 @@
     transform: translateY(3rem); }
   100% {
     opacity: 1;
-    transform: translate(0); } }
+    transform: translateY(0); } }
+
+@keyframes nudge {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(-0.4rem); } }
 
 /**
 |--------------------------------------------------
@@ -145,14 +151,22 @@ body {
 |--------------------------------------------------
 */
 .header {
-  padding: 12rem 4.5rem 14rem;
+  height: 100vh;
+  padding: 4rem 4.5rem 4rem;
   position: relative;
-  background: linear-gradient(to bottom right, rgba(7, 7, 61, 0.7), rgba(7, 7, 61, 0.4)); }
+  background: linear-gradient(to bottom right, rgba(7, 7, 61, 0.7), rgba(7, 7, 61, 0.4));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
   @media only screen and (max-width: 56.25em) {
     .header {
-      padding: 18rem 3.5rem 15rem; } }
+      padding: 10rem 3.5rem 5rem; } }
+  @media only screen and (max-height: 37.5em) {
+    .header {
+      height: initial; } }
   .header__container {
-    margin: auto;
+    margin-bottom: 7rem;
     display: flex;
     flex-direction: column; }
     @media only screen and (max-width: 62.5em) {
@@ -161,6 +175,9 @@ body {
     @media only screen and (max-width: 37.5em) {
       .header__container {
         width: 100%; } }
+    @media only screen and (max-height: 37.5em) {
+      .header__container {
+        padding-bottom: 6rem; } }
 
 /**
 |--------------------------------------------------
@@ -367,7 +384,7 @@ body {
 */
 .header__title {
   height: 30rem;
-  margin-bottom: 8rem; }
+  margin-bottom: 5rem; }
   @media only screen and (max-width: 37.5em) {
     .header__title {
       margin-right: auto;
@@ -416,9 +433,26 @@ body {
 
 .header__btn {
   align-self: center; }
-  @media only screen and (max-width: 43.75em) {
-    .header__btn {
-      margin-bottom: 6rem; } }
+
+.header__scroll:link, .header__scroll:visited, .header__scroll:focus, .header__scroll:active {
+  position: absolute;
+  bottom: 5rem;
+  width: 2.2rem;
+  height: 3.5rem;
+  border: 0.1rem solid #eae8eb;
+  border-radius: 1.2rem; }
+  .header__scroll:link:before, .header__scroll:visited:before, .header__scroll:focus:before, .header__scroll:active:before {
+    position: absolute;
+    content: "";
+    width: .4rem;
+    height: .6rem;
+    border-radius: 1rem;
+    top: 1.2rem;
+    background-color: #eae8eb;
+    left: 40%;
+    transform: translateX(-50%);
+    opacity: 1;
+    animation: nudge 1s linear infinite alternate; }
 
 .about__title {
   margin-bottom: 8rem; }

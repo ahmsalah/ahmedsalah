@@ -124,7 +124,7 @@ $b400: 25em;
 
   100% {
       opacity: 1;
-      transform: translate(0);
+      transform: translateY(0);
   }
 }
 
@@ -136,7 +136,17 @@ $b400: 25em;
 
   100% {
       opacity: 1;
-      transform: translate(0);
+      transform: translateY(0);
+  }
+}
+
+@keyframes nudge {
+  0% {
+      transform: translateY(0);
+  }
+
+  100% {
+      transform: translateY(-.4rem);
   }
 }
 //--- Keyframes Animations <END> ---//
