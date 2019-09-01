@@ -421,6 +421,9 @@
   }
 
   & h1 {
+    @media only screen and (max-width: $b500) {
+      font-size: 3rem;
+    }
     @media only screen and (max-width: $b400) {
       font-size: 2.5rem;
     }  
