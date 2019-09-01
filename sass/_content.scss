@@ -15,6 +15,7 @@
 //    ► Header 
 //          → title
 //          → button
+//          → scroll
 //          
 //    ► About  
 //          → paragraph container
@@ -96,6 +97,7 @@
     height: .4rem;
     bottom: -1.4rem;
     background-color: currentColor;
+
     @media only screen and (max-width: $b900) {
       bottom: -.9rem;
       height: .35rem;
@@ -118,7 +120,6 @@
       @media only screen and (max-width: $b500) {
         border-radius: .1rem;
         width: .30rem;
-
       }  
     }
   }
@@ -297,8 +298,7 @@
     &-1 {
       font-size: 5.5rem;
       font-weight: 600;
-      // line-height: 1.6;
-      // margin-bottom: .4rem;
+      margin-bottom: .3rem;
       // animation: moveInBottom2 .7s ease-out backwards .05s;
 
       @media only screen and (max-width: $b700) {
@@ -313,8 +313,8 @@
     &-2 {
       font-size: 8rem;
       font-weight: 400;
-      // animation: moveInBottom .7s ease-out backwards .4s;
       margin-bottom: 2rem;
+      // animation: moveInBottom .7s ease-out backwards .4s;
 
       @media only screen and (max-width: $b700) {
         font-size: calc(8rem * .8);
@@ -327,7 +327,6 @@
     &-3 {
       font-size: 3rem;
       font-weight: 600;
-      // line-height: 2.9;
 
       @media only screen and (max-width: $b700) {
         font-size: calc(3rem * .8);
@@ -340,12 +339,6 @@
 
   &__btn {
     align-self: center;
-    // margin-top: auto;
-    // margin-bottom: 6rem; ///////
-
-    @media only screen and (max-width: $b700) {
-      // margin-bottom: 6rem;
-    }
   }
 
   &__scroll {
@@ -370,8 +363,6 @@
         top: 1.2rem;
         background-color: $color-grey;
         left: .8rem;
-        // transform: translateX(-.2rem);
-        opacity: 1;
         animation: nudge 1s linear infinite alternate;
       }
     }
@@ -395,16 +386,15 @@
     column-width: auto;
     column-count: 2;
     column-gap: 6rem;
-    padding: 0px;
 
     @media only screen and (max-width: $b700) {
       column-count: 1;      
-      padding: 0px 1.5rem;
+      padding: 0 1.5rem;
     }
   }
   
   &__item {
-    margin: 0px 0px 3rem;
+    margin: 0 0 3rem;
   }
 }
 //--- ABOUT SECTION <END> ---//
@@ -434,7 +424,7 @@
 
 .image-text {
   display: flex;
-  flex-direction: row; // >>> media query
+  flex-direction: row;
   flex-wrap: nowrap;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -451,12 +441,6 @@
     }
   }
 
-  // &--position-left {
-  //   & &__content-wrapper &__content-wrapper--inner &__content-title {
-  //     width: 75%;
-  //     text-align: right;
-  //   }
-  // }
   
   &--position-left &__content-wrapper &__content-wrapper--inner &__content-title {
     width: 75%;
@@ -468,10 +452,6 @@
     }
   }
   
-  // &--position-right {
-
-  // }
-
   &__image-wrapper {
     flex: 1 1 0%; 
     position: relative;
@@ -482,29 +462,17 @@
     cursor: pointer;
     
     @media only screen and (max-width: $b700) {
-      // height: 100%;
       flex: 1 1 auto;
-      // width: 90%;
       margin: 0 auto 3rem;
-      // margin-bottom: 4rem;
-    }
-  
+    }  
   }
 
   &__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    // position: absolute; //
-    // left: 0px; //
-    // top: 0px; //
-    // overflow: hidden;
     transition: transform .5s ease-out;
     // filter: blur(.1rem) brightness(90%); //
-
-    @media only screen and (max-width: $b700) {
-      // height: auto;
-    }
 
     &:hover {
       transform: scale(1.05);
@@ -524,8 +492,7 @@
 
 
   &__content-wrapper {
-    flex: .8 .1 0%; // >>> Media query
-    margin-top: 0px; // >>>> media query
+    flex: .8 1 0%; // >>> Media query
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -585,6 +552,7 @@
       align-items: center;
       font-size: 1.5rem;
       padding: 1rem 2rem;
+      
       &:not(:last-child) {
         margin-right: 2rem;
         @media only screen and (max-width: $b700) {
@@ -609,6 +577,7 @@
   &__container {
     display: flex;
     flex-wrap: wrap;
+
     @media only screen and (max-width: $b700) {
       justify-content: center;
     }
@@ -622,6 +591,7 @@
     color: $color-grey;
     background-color: #000;
     margin-bottom: .6rem;
+
     &:not(:last-child) {
       margin-right: .6rem;
     }
@@ -638,9 +608,11 @@
 
 //--- CONTACT SECTION <START> ---//
 .contact {
+  position: relative;
+  
   &__title{
     margin-bottom: 12rem;
-    // margin-top: 12rem;
+
     & h1 {
       margin-bottom: -.1px;
 
@@ -688,7 +660,8 @@
 }
 
 .copyright {
-  margin-top: 16rem;
+  position: absolute;
+  bottom: 4rem;
 }
 //--- CONTACT SECTION <END> ---//
 

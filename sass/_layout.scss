@@ -34,7 +34,6 @@
   
   display: flex;
   flex-direction: column;
-  // justify-items: center;
   justify-content: center;
   align-items: center;
   
@@ -52,11 +51,9 @@
     
     @media only screen and (max-width: $b1000) {
       width: 82%;
-      // padding-left: 3rem;
     }
 
     @media only screen and (max-width: $b600) {
-    //   font-size: 50%;
       width: 100%;
     }
 
@@ -74,7 +71,6 @@
 
 .about {
   padding: 15rem 4.5rem 16.5rem;
-  // min-height: 100vh;
   
   @media only screen and (max-width: $b700) {
     padding: 13rem 3.5rem 12rem;
@@ -113,7 +109,6 @@
       margin-bottom: 10rem;
       // margin-bottom: 3rem; // media query
     }
-    
   }
 }
 
@@ -124,7 +119,13 @@
 */
 
 .contact {
-  padding: 12rem 4.5rem 1.5rem;
+  padding: 12rem 4.5rem 12rem;
+  min-height: 100vh;
+  justify-content: center;
+
+  @media only screen and (max-height: $b600) {
+    min-height: initial;
+  }  
 
   &__container {
     display: flex;
@@ -132,5 +133,4 @@
     justify-content: center;
     align-items: center;
   }
-
 }

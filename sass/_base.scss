@@ -123,15 +123,15 @@ html {
  box-sizing: border-box;
  font-size: 62.5%; // 1rem = 10px // 10px/16px = 62.5%
   
-  @media only screen and (max-width: $bp-huge) {
+  @media only screen and (max-width: $b1000) {
     font-size: 60%;
   }
 
-  @media only screen and (max-width: $bp-medium) {
+  @media only screen and (max-width: $b900) {
     font-size: 56.25%;
   }
 
-  @media only screen and (min-width: $bp-gig) {
+  @media only screen and (min-width: $b1600) {
     font-size: 80%;
   }
 }
