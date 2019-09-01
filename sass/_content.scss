@@ -136,7 +136,7 @@
     text-decoration: none;
     // display: inline-block;
     background-size: 380%;
-    transition: all 1s;
+    transition: all .8s;
     border: 1px solid currentColor;
 
     @media only screen and (max-width: $b600) {
@@ -299,7 +299,7 @@
       font-weight: 600;
       // line-height: 1.6;
       // margin-bottom: .4rem;
-      animation: moveInBottom2 .7s ease-out backwards .05s;
+      // animation: moveInBottom2 .7s ease-out backwards .05s;
 
       @media only screen and (max-width: $b700) {
         font-size: calc(5.5rem * .8);
