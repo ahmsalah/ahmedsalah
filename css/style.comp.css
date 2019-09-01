@@ -423,7 +423,7 @@ body {
   .header__title-1 {
     font-size: 5.5rem;
     font-weight: 600;
-    margin-bottom: .4rem; }
+    margin-bottom: .5rem; }
     @media only screen and (max-width: 43.75em) {
       .header__title-1 {
         font-size: calc(5.5rem * .8); } }
@@ -433,14 +433,13 @@ body {
   .header__title-2 {
     font-size: 8rem;
     font-weight: 400;
-    margin-bottom: 2rem; }
+    margin-bottom: 1.3rem; }
     @media only screen and (max-width: 43.75em) {
       .header__title-2 {
         font-size: calc(8rem * .8); } }
     @media only screen and (max-width: 31.25em) {
       .header__title-2 {
-        font-size: calc(8rem * .65);
-        margin-bottom: 1.5rem; } }
+        font-size: calc(8rem * .65); } }
   .header__title-3 {
     font-size: 3rem;
     font-weight: 600; }
