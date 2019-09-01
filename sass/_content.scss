@@ -369,8 +369,8 @@
         border-radius: 1rem;
         top: 1.2rem;
         background-color: $color-grey;
-        left: 40%;
-        transform: translateX(-50%);
+        left: .8rem;
+        // transform: translateX(-.2rem);
         opacity: 1;
         animation: nudge 1s linear infinite alternate;
       }
