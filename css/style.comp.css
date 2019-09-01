@@ -263,7 +263,7 @@ body {
       font-size: 4rem; } }
   @media only screen and (max-width: 31.25em) {
     .main-title__inner {
-      font-size: 3rem;
+      font-size: 3.5rem;
       font-weight: 600; } }
 
 .main-title__animation {
@@ -489,7 +489,10 @@ body {
     .work__title {
       margin-left: 1rem;
       margin-bottom: 9rem; } }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 25em) {
+    .work__title {
+      margin-left: 0; } }
+  @media only screen and (max-width: 25em) {
     .work__title h1 {
       font-size: 2.5rem; } }
 
@@ -650,7 +653,7 @@ body {
 
 .copyright {
   position: absolute;
-  bottom: 2.5rem; }
+  bottom: 2rem; }
 
 /**
 |--------------------------------------------------
