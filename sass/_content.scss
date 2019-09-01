@@ -299,7 +299,7 @@
     &-1 {
       font-size: 5.5rem;
       font-weight: 600;
-      margin-bottom: .3rem;
+      margin-bottom: .4rem;
       // animation: moveInBottom2 .7s ease-out backwards .05s;
 
       @media only screen and (max-width: $b700) {
@@ -322,6 +322,7 @@
       }
       @media only screen and (max-width: $b500) {
         font-size: calc(8rem * .65);
+        margin-bottom: 1.5rem;
       }
     }
 
