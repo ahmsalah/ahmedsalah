@@ -103,6 +103,27 @@ $b400: 25em;
 }
 //--- Work Image <END> ---//
 
+[data-aos] {
+  body[data-aos-easing="line-ease"] &,
+  &[data-aos][data-aos-easing="line-ease"] {
+    transition-timing-function: cubic-bezier(.215, .61, .355, 1);
+  }
+}
+
+[data-aos="line-down"] {
+  height: 0;
+  transition-property: height;
+
+  &.aos-animate {
+    height: 9.5rem;
+  
+    // @media only screen and (max-height: $b500) {
+      // height: calc(100% - .6rem);
+    // }
+  }
+}
+
+
 
 //--- Keyframes Animations <START> ---//
 @keyframes moveInBottom {

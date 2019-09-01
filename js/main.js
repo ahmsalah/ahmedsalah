@@ -47,7 +47,7 @@ $(document).ready(function () {
     e.preventDefault(); 
     var targetElement = $(this).attr("href");
     var targetPosition = $(targetElement).offset().top
-    $('html, body').animate({ scrollTop: (targetElement === '#work' ? targetPosition + 30 : targetPosition + 20) }, 1500, "easeInOutExpo")
+    $('html, body').animate({ scrollTop: (targetElement === '#contact' ? targetPosition + 30 : targetPosition + 20) }, 1500, "easeInOutExpo")
   });
   
   // var target =   $('a[href*="#"]')
