@@ -76,7 +76,7 @@
 
   &__inner {
     font-size: 6rem;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 100%;
     position: relative;
 
@@ -133,7 +133,7 @@
   &:visited {
     padding: 1.3rem 6rem;
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 600;
     text-decoration: none;
     // display: inline-block;
     background-size: 380%;
@@ -297,7 +297,7 @@
     
     &-1 {
       font-size: 5.5rem;
-      font-weight: 700;
+      font-weight: 600;
       margin-bottom: .3rem;
       // animation: moveInBottom2 .7s ease-out backwards .05s;
 
@@ -326,7 +326,7 @@
 
     &-3 {
       font-size: 3rem;
-      font-weight: 700;
+      font-weight: 600;
 
       @media only screen and (max-width: $b700) {
         font-size: calc(3rem * .8);
