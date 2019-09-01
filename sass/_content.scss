@@ -416,13 +416,13 @@
     margin-bottom: 9rem;
   }
 
-  @media only screen and (max-width: $b400) {
+  @media only screen and (max-width: $b500) {
     margin-left: 0;
   }
 
   & h1 {
     @media only screen and (max-width: $b500) {
-      font-size: 3rem;
+      font-size: 3.3rem;
     }
     @media only screen and (max-width: $b400) {
       font-size: 2.5rem;
