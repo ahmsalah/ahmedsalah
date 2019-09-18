@@ -105,7 +105,7 @@
     }
     @media only screen and (max-width: $b500) {
       bottom: -.7rem;
-      height: .22rem;
+      height: .3rem;
     }
   
     &-before {
@@ -627,7 +627,7 @@
 
   &__inner {
     background-color: $color-grey;
-    width: .12rem;
+    width: .2rem;
     display: block;
     margin: 0 auto;
     // height 0.9s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;

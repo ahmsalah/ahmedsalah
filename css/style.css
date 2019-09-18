@@ -293,7 +293,7 @@ body {
   @media only screen and (max-width: 31.25em) {
     .main-title__animation {
       bottom: -.7rem;
-      height: .22rem; } }
+      height: .3rem; } }
   .main-title__animation-before {
     left: 0;
     border-radius: .15rem; }
@@ -651,7 +651,7 @@ body {
       height: 13rem; } }
   .animated-line__inner {
     background-color: #eae8eb;
-    width: .12rem;
+    width: .2rem;
     display: block;
     margin: 0 auto; }
 
