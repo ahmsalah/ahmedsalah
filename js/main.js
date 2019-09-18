@@ -47,7 +47,7 @@ $(document).ready(function () {
     e.preventDefault(); 
     var targetElement = $(this).attr("href");
     var targetPosition = $(targetElement).offset().top
-    $('html, body').animate({ scrollTop: (targetElement === '#contact' ? targetPosition + 45 : targetPosition + 20) }, 1500, "easeInOutExpo")
+    $('html, body').animate({ scrollTop: (targetElement === '#contact' ? targetPosition + 60 : targetPosition + 20) }, 1500, "easeInOutExpo")
   });
   
   // var target =   $('a[href*="#"]')
@@ -75,7 +75,7 @@ $(document).ready(function () {
   var typed = new Typed(".js-typed", {
     strings: ["A Front-end Web Developer based in Cairo."],
     typeSpeed: 70,
-    startDelay: 2000,
+    startDelay: 2700,
     showCursor: false
   })
 

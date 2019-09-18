@@ -103,6 +103,9 @@ $b400: 25em;
 }
 //--- Work Image <END> ---//
 
+
+//--- animated line <START> ---//
+
 [data-aos] {
   body[data-aos-easing="line-ease"] &,
   &[data-aos][data-aos-easing="line-ease"] {
@@ -116,13 +119,17 @@ $b400: 25em;
 
   &.aos-animate {
     height: 9.5rem;
+    @media only screen and (min-height: $b700) {
+      height: 14.5rem;
+    }
+  
   
     // @media only screen and (max-height: $b500) {
       // height: calc(100% - .6rem);
     // }
   }
 }
-
+//--- animated line <END> ---//
 
 
 //--- Keyframes Animations <START> ---//
@@ -156,7 +163,7 @@ $b400: 25em;
   }
 
   100% {
-      transform: translateY(-.4rem);
+      transform: translateY(-.5rem);
   }
 }
 //--- Keyframes Animations <END> ---//
