@@ -406,21 +406,20 @@
 
 //--- WORK SECTION <START> ---//
 .work__title {
-  margin-left: 3rem;
   margin-bottom: 12rem;
+  margin-left: 4.5rem;
+
+  @media only screen and (max-width: $b1000) {
+    margin-left: 2.5rem;
+  }
 
   @media only screen and (max-width: $b900) {
-    margin-left: 3rem;
     margin-bottom: 10rem;
+    margin-left: 0;
   }
   
   @media only screen and (max-width: $b700) {
-    margin-left: .5rem;
     margin-bottom: 8rem;
-  }
-
-  @media only screen and (max-width: $b500) {
-    margin-left: 0;
   }
 }
 
@@ -428,17 +427,11 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  padding: 0 1.5rem;
   
   @media only screen and (max-width: $b700) {
     flex-direction: column;
-    padding: 0 .5rem;
   }
 
-  @media only screen and (max-width: $b500) {
-    padding: 0;
-  }
-  
   &--position-right {
     @media only screen and (max-width: $b700) {
       flex-direction: column-reverse;
@@ -447,7 +440,7 @@
 
   
   &--position-left &__content-wrapper &__content-wrapper--inner &__content-title {
-    width: 75%;
+    width: 80%;
     text-align: right;
     
     @media only screen and (max-width: $b700) {
@@ -455,14 +448,35 @@
       text-align: initial;
     }
   }
-  
+
+  &--position-left &__image-wrapper {
+    margin-left: 4.5rem;
+
+    @media only screen and (max-width: $b1000) {
+      margin-left: 2.5rem;
+    }  
+
+    @media only screen and (max-width: $b900) {
+      margin-left: 0;
+    }
+  }
+  &--position-right &__image-wrapper {
+    margin-right: 4.5rem;
+
+    @media only screen and (max-width: $b1000) {
+      margin-left: 2.5rem;
+    }  
+    
+    @media only screen and (max-width: $b900) {
+      margin-left: 0;
+    }
+  }
+
   &__image-wrapper {
     flex: 1 1 0%; 
     position: relative;
     display: flex;
     width: 100%;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;  
     cursor: pointer;
     
     @media only screen and (max-width: $b700) {
@@ -504,7 +518,7 @@
 
 
   &__content-wrapper {
-    flex: .8 1 0%; // >>> Media query
+    flex: 1 1 0%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -512,7 +526,7 @@
     width: 100%;
 
     &--inner {
-      width: 80%;
+      width: 81%;
       display: flex;
       flex-direction: column;
 
