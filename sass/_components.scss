@@ -1,44 +1,42 @@
-
 // ▣▣▣▣▣ INDEX <START> ▣▣▣▣▣
-// 
+//
 // ▨ REUSABLE COMPONENTS
 //    ► Main title
-// 
-//    ► Buttons 
+//
+//    ► Buttons
 //          → btn-primary
 //          → btn-secondary
-// 
+//
 //    ► background video
-// 
-// 
+//
+//
 // ▧ PAGE COMPONENTS
-//    ► Header 
+//    ► Header
 //          → title
 //          → button
 //          → scroll
-//          
-//    ► About  
+//
+//    ► About
 //          → paragraph container
 //          → paragraph item
-// 
-//    ► Work 
+//
+//    ► Work
 //          → work title
 //          → image-text ⇩
 //              ◽ image-wrapper
 //              ◽ content-wrapper
 //          → tags
-// 
-//    ► Contact 
+//
+//    ► Contact
 //          → btn email
 //          → btn number
-//          → icons 
+//          → icons
 //              ◽ container
 //              ◽ link
 //              ◽ item
 //          → copyright
-// 
+//
 // ▣▣▣▣▣ INDEX <END> ▣▣▣▣▣
-
 
 /**
 |--------------------------------------------------
@@ -46,215 +44,215 @@
 |--------------------------------------------------
 */
 
-
 //--- loader <START> ---//
 .loader {
-  width: 100%;
-  height: 100%;
-  background-color: $color-primary;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+	width: 100%;
+	height: 100%;
+	background-color: $color-primary;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
 
-  &__inner {
-    width: 100%;
-    height: 100%;
-    background: url(../img/loader.svg) center center no-repeat;
-  }
+	&__inner {
+		width: 100%;
+		height: 100%;
+		background: url(../assets/svg/loader.svg) center center no-repeat;
+	}
 }
 //--- loader <END> ---//
 
-
 //--- Main title <START> ---//
 .main-title {
-  &__wrapper {
-    position: relative;
-    display: inline-block;
+	&__wrapper {
+		position: relative;
+		display: inline-block;
+	}
 
-  }
+	&__inner {
+		font-size: 5rem;
+		font-weight: 500;
+		line-height: 100%;
+		position: relative;
 
-  &__inner {
-    font-size: 5rem;
-    font-weight: 500;
-    line-height: 100%;
-    position: relative;
-
-    @media only screen and (max-width: $b900) {
-      font-size: 4rem;
-    }
+		@media only screen and (max-width: $b900) {
+			font-size: 4rem;
+		}
 
 		@media only screen and (max-width: $b500) {
 			font-size: 3rem;
 			font-weight: 600;
-    }
-    
+		}
+
 		@media only screen and (max-width: $b360) {
 			font-size: 2.5rem;
 			font-weight: 600;
 		}
-  }
+	}
 
-//-- Main Title Line Animation 
-  &__animation {
-    position: absolute;
-    height: .4rem;
-    bottom: -1.4rem;
-    background-color: currentColor;
+	//-- Main Title Line Animation
+	&__animation {
+		position: absolute;
+		height: .4rem;
+		bottom: -1.4rem;
+		background-color: currentColor;
 
-    @media only screen and (max-width: $b900) {
-      bottom: -.9rem;
-      height: .35rem;
-    }
-    @media only screen and (max-width: $b500) {
-      bottom: -.7rem;
-      height: .3rem;
-    }
-  
-    &-before {
-      left: 0;
-      border-radius: .15rem;
-    }
+		@media only screen and (max-width: $b900) {
+			bottom: -.9rem;
+			height: .35rem;
+		}
+		@media only screen and (max-width: $b500) {
+			bottom: -.7rem;
+			height: .3rem;
+		}
 
-    &-after {
-      width: .45rem;
-      right: 0;
-      border-radius: .15rem;
+		&-before {
+			left: 0;
+			border-radius: .15rem;
+		}
 
-      @media only screen and (max-width: $b500) {
-        border-radius: .1rem;
-        width: .30rem;
-      }  
-    }
-  }
+		&-after {
+			width: .45rem;
+			right: 0;
+			border-radius: .15rem;
+
+			@media only screen and (max-width: $b500) {
+				border-radius: .1rem;
+				width: .30rem;
+			}
+		}
+	}
 }
 //--- Main title <END> ---//
 
-
 //--- Buttons <START> ---//
 .btn-primary {
-  &:link,
-  &:visited {
-    padding: 1.3rem 6rem;
-    font-size: 3rem;
-    font-weight: 600;
-    text-decoration: none;
-    // display: inline-block;
-    background-size: 380%;
-    transition: all .8s;
-    border: 1px solid currentColor;
+	&:link,
+	&:visited {
+		padding: 1.3rem 6rem;
+		font-size: 3rem;
+		font-weight: 600;
+		text-decoration: none;
+		// display: inline-block;
+		background-size: 380%;
+		transition: all .8s;
+		border: 1px solid currentColor;
 
-    @media only screen and (max-width: $b600) {
-      font-size: 2rem;
-      padding: 1.2rem 5rem;
-    }
-  }
+		@media only screen and (max-width: $b600) {
+			font-size: 2rem;
+			padding: 1.2rem 5rem;
+		}
+	}
 
-  &--light {
-    color: $color-grey;
-    background-image: linear-gradient(38deg, transparent 0%, transparent 50%, $color-grey 50%);
+	&--light {
+		color: $color-grey;
+		background-image: linear-gradient(38deg, transparent 0%, transparent 50%, $color-grey 50%);
 
-    @media only screen and (max-width: $b500) {
-      background-image: linear-gradient(60deg, transparent 0%, transparent 50%, $color-grey 50%);
-    }
-    
-    &:hover {
-      background-position: 100%;
-      color: $color-primary;
-    }
-  }
+		@media only screen and (max-width: $b500) {
+			background-image: linear-gradient(
+				60deg,
+				transparent 0%,
+				transparent 50%,
+				$color-grey 50%
+			);
+		}
 
-  &--dark {
-    color: #000;
-    background-image: linear-gradient(70deg, transparent 0%, transparent 50%, #000 50%);
+		&:hover {
+			background-position: 100%;
+			color: $color-primary;
+		}
+	}
 
-    &:hover {
-      background-position: 100%;
-      color: #fff;
-      fill: #fff;
-    }
-  }
+	&--dark {
+		color: #000;
+		background-image: linear-gradient(70deg, transparent 0%, transparent 50%, #000 50%);
 
-  &--animated {
-    animation: moveInBottom .9s ease 1.7s 1 backwards;
-  }
+		&:hover {
+			background-position: 100%;
+			color: #fff;
+			fill: #fff;
+		}
+	}
+
+	&--animated {
+		animation: moveInBottom .9s ease 1.7s 1 backwards;
+	}
 }
 
 .btn-secondary {
-  &:link,
-  &:visited {
-    display: inline-block;
-    position: relative;
-    text-decoration: none;
-    color: $color-grey;
-    transition: color .2s ease-in-out .05s;
-    line-height: 100%;
-  }
+	&:link,
+	&:visited {
+		display: inline-block;
+		position: relative;
+		text-decoration: none;
+		color: $color-grey;
+		transition: color .2s ease-in-out .05s;
+		line-height: 100%;
+	}
 
-  &::before,
-  &::after {
-    content: "";  
-    position: absolute;
-    height: .2rem;
-    bottom: -.6rem;
-    background-color: $color-grey;
-  }
-  
-  &::before { 
-    left: 0;
-    width: 0;
-    border-radius: .1rem;
-    transition: width .2s ease-in-out .05s;
-  }
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		height: .2rem;
+		bottom: -.6rem;
+		background-color: $color-grey;
+	}
 
-  &::after {
-    height: .22rem;
-    width: .25rem;
-    border-radius: 40%;  
-    right: 0;
-    opacity: 0;
-    transform: translate(-.8rem);
-    transition: opacity 0s linear .2s, transform .05s ease-out .18s;
-  }
+	&::before {
+		left: 0;
+		width: 0;
+		border-radius: .1rem;
+		transition: width .2s ease-in-out .05s;
+	}
 
-  &:hover {
-    color: $color-pink;
-    
-    &::before {
-      background-color: $color-pink;
-      width: calc(100% - .6rem);
-    }
-    
-    &::after { 
-      opacity: 1;
-      transform: translate(0rem);
-      background-color: $color-pink;
-    }
-  }
+	&::after {
+		height: .22rem;
+		width: .25rem;
+		border-radius: 40%;
+		right: 0;
+		opacity: 0;
+		transform: translate(-.8rem);
+		transition: opacity 0s linear .2s, transform .05s ease-out .18s;
+	}
+
+	&:hover {
+		color: $color-pink;
+
+		&::before {
+			background-color: $color-pink;
+			width: calc(100% - .6rem);
+		}
+
+		&::after {
+			opacity: 1;
+			transform: translate(0rem);
+			background-color: $color-pink;
+		}
+	}
 }
 //--- Buttons <END> ---//
 
-
 //--- Background Video <START> ---//
 .bg-video {
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  // because the video is overflowing the padding
-  overflow: hidden; 
-  
-  &__header {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	// because the video is overflowing the padding
+	overflow: hidden;
 
-  &__content {
-    height: 100%;
-    width: 100%;
-    object-fit: cover; 
-  }
+	&__header {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	&__content {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
 }
 //--- Background Video <END> ---//
 
@@ -264,9 +262,6 @@
 |--------------------------------------------------
 */
 
-
-
-
 /**
 |--------------------------------------------------
 | PAGE COMPONENTS <START>
@@ -275,442 +270,436 @@
 
 //--- HEADER SECTION <START> ---//
 .header {
-  &__title {
-    height: 30rem;
-    margin-bottom: 5rem;
+	&__title {
+		height: 30rem;
+		margin-bottom: 5rem;
 
-    @media only screen and (max-width: $b600) {
-      margin-right: auto;
-      margin-left: auto;
-      width: 410px;
-      height: 27rem;
-      margin-bottom: 6rem;
-    }
-    
-    @media only screen and (max-width: $b500) {
-      margin-right: 0;
-      margin-left: 0;
-      width: auto;
-      margin-top: 5rem;
-      height: 25rem;
-    }
+		@media only screen and (max-width: $b600) {
+			margin-right: auto;
+			margin-left: auto;
+			width: 410px;
+			height: 27rem;
+			margin-bottom: 6rem;
+		}
 
+		@media only screen and (max-width: $b500) {
+			margin-right: 0;
+			margin-left: 0;
+			width: auto;
+			margin-top: 5rem;
+			height: 25rem;
+		}
 
-    & > * {
-      display: block;
-      text-shadow: 0 1rem 3rem rgba(0,0,0 , .6);
-    }
-    
-    &-1 {
-      font-size: 5.5rem;
-      font-weight: 600;
-      margin-bottom: .5rem;
-      // animation: moveInBottom2 .7s ease-out backwards .05s;
+		& > * {
+			display: block;
+			text-shadow: 0 1rem 3rem rgba(0, 0, 0, .6);
+		}
 
-      @media only screen and (max-width: $b700) {
-        font-size: calc(5.5rem * .8);
-      }
+		&-1 {
+			font-size: 5.5rem;
+			font-weight: 600;
+			margin-bottom: .5rem;
+			// animation: moveInBottom2 .7s ease-out backwards .05s;
 
-      @media only screen and (max-width: $b500) {
-        font-size: calc(5.5rem * .65);
-      }
-    }
+			@media only screen and (max-width: $b700) {
+				font-size: calc(5.5rem * .8);
+			}
 
-    &-2 {
-      font-size: 8rem;
-      font-weight: 400;
-      margin-bottom: 1.3rem;
-      // animation: moveInBottom .7s ease-out backwards .4s;
+			@media only screen and (max-width: $b500) {
+				font-size: calc(5.5rem * .65);
+			}
+		}
 
-      @media only screen and (max-width: $b700) {
-        font-size: calc(8rem * .8);
-      }
-      @media only screen and (max-width: $b500) {
-        font-size: calc(8rem * .65);
-      }
-    }
+		&-2 {
+			font-size: 8rem;
+			font-weight: 400;
+			margin-bottom: 1.3rem;
+			// animation: moveInBottom .7s ease-out backwards .4s;
 
-    &-3 {
-      font-size: 3rem;
-      font-weight: 600;
+			@media only screen and (max-width: $b700) {
+				font-size: calc(8rem * .8);
+			}
+			@media only screen and (max-width: $b500) {
+				font-size: calc(8rem * .65);
+			}
+		}
 
-      @media only screen and (max-width: $b700) {
-        font-size: calc(3rem * .8);
-      }   
-      @media only screen and (max-width: $b500) {
-        font-size: calc(3rem * .7);
-      }
-    }
-  }
+		&-3 {
+			font-size: 3rem;
+			font-weight: 600;
 
-  &__btn {
-    align-self: center;
-  }
+			@media only screen and (max-width: $b700) {
+				font-size: calc(3rem * .8);
+			}
+			@media only screen and (max-width: $b500) {
+				font-size: calc(3rem * .7);
+			}
+		}
+	}
 
-  &__scroll {
-    &:link,
-    &:visited,
-    &:focus,
-    &:active {
-      position: absolute;
-      bottom: 5rem;
-      width: 2.2rem;
-      height: 3.5rem;
-      border: .1rem solid $color-grey;
-      border-radius: 1.2rem;
-      animation: nudge 1s linear infinite alternate;
+	&__btn {
+		align-self: center;
+	}
 
-      &:before {
-        position: absolute;
-        content: "";
-        width: .4rem;
-        height: .6rem;
-        border-radius: 1rem;
-        top: 1.2rem;
-        background-color: $color-grey;
-        left: .8rem;
-        animation: nudge 1s linear infinite alternate;
-      }
-    }
-  }
+	&__scroll {
+		&:link,
+		&:visited,
+		&:focus,
+		&:active {
+			position: absolute;
+			bottom: 5rem;
+			width: 2.2rem;
+			height: 3.5rem;
+			border: .1rem solid $color-grey;
+			border-radius: 1.2rem;
+			animation: nudge 1s linear infinite alternate;
+
+			&:before {
+				position: absolute;
+				content: "";
+				width: .4rem;
+				height: .6rem;
+				border-radius: 1rem;
+				top: 1.2rem;
+				background-color: $color-grey;
+				left: .8rem;
+				animation: nudge 1s linear infinite alternate;
+			}
+		}
+	}
 }
 //--- HEADER SECTION <END> ---//
-
 
 //--- ABOUT SECTION <START> ---//
 
 .about__title {
-  margin-bottom: 8rem;
+	margin-bottom: 8rem;
 
-  @media only screen and (max-width: $b700) {
-    margin-bottom: 6rem;   
-  }
+	@media only screen and (max-width: $b700) {
+		margin-bottom: 6rem;
+	}
 }
 .paragraph {
-  &__container {
-    column-width: auto;
-    column-count: 2;
-    column-gap: 6rem;
+	&__container {
+		column-width: auto;
+		column-count: 2;
+		column-gap: 6rem;
 
-    @media only screen and (max-width: $b700) {
-      column-count: 1;      
-    }
-  }
+		@media only screen and (max-width: $b700) {
+			column-count: 1;
+		}
+	}
 
-  &__item {
-    margin: 0 0 3rem;
-  }
+	&__item {
+		margin: 0 0 3rem;
+	}
 }
 //--- ABOUT SECTION <END> ---//
 
-
 //--- WORK SECTION <START> ---//
 .work__title {
-  margin-bottom: 12rem;
-  margin-left: 4.5rem;
+	margin-bottom: 12rem;
+	margin-left: 4.5rem;
 
-  @media only screen and (max-width: $b1000) {
-    margin-left: 2.5rem;
-  }
+	@media only screen and (max-width: $b1000) {
+		margin-left: 2.5rem;
+	}
 
-  @media only screen and (max-width: $b900) {
-    margin-bottom: 10rem;
-    margin-left: 0;
-  }
-  
-  @media only screen and (max-width: $b700) {
-    margin-bottom: 8rem;
-  }
+	@media only screen and (max-width: $b900) {
+		margin-bottom: 10rem;
+		margin-left: 0;
+	}
+
+	@media only screen and (max-width: $b700) {
+		margin-bottom: 8rem;
+	}
 }
 
 .image-text {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  
-  @media only screen and (max-width: $b700) {
-    flex-direction: column;
-  }
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
 
-  &--position-right {
-    @media only screen and (max-width: $b700) {
-      flex-direction: column-reverse;
-    }
-  }
+	@media only screen and (max-width: $b700) {
+		flex-direction: column;
+	}
 
-  
-  &--position-left &__content-wrapper &__content-wrapper--inner &__content-title {
-    width: 80%;
-    text-align: right;
-    
-    @media only screen and (max-width: $b700) {
-      width: auto;
-      text-align: initial;
-    }
-  }
+	&--position-right {
+		@media only screen and (max-width: $b700) {
+			flex-direction: column-reverse;
+		}
+	}
 
-  &--position-left &__image-wrapper {
-    margin-left: 4.5rem;
+	&--position-left &__content-wrapper &__content-wrapper--inner &__content-title {
+		width: 80%;
+		text-align: right;
 
-    @media only screen and (max-width: $b1000) {
-      margin-left: 2.5rem;
-    }  
+		@media only screen and (max-width: $b700) {
+			width: auto;
+			text-align: initial;
+		}
+	}
 
-    @media only screen and (max-width: $b900) {
-      margin-left: 0;
-    }
-  }
-  &--position-right &__image-wrapper {
-    margin-right: 4.5rem;
+	&--position-left &__image-wrapper {
+		margin-left: 4.5rem;
 
-    @media only screen and (max-width: $b1000) {
-      margin-left: 2.5rem;
-    }  
-    
-    @media only screen and (max-width: $b900) {
-      margin-left: 0;
-    }
-  }
+		@media only screen and (max-width: $b1000) {
+			margin-left: 2.5rem;
+		}
 
-  &__image-wrapper {
-    flex: 1 1 0%; 
-    position: relative;
-    display: flex;
-    width: 100%;
-    cursor: pointer;
-    
-    @media only screen and (max-width: $b700) {
-      flex: 1 1 auto;
-      margin: 0 auto 3rem;
-    }  
-  }
+		@media only screen and (max-width: $b900) {
+			margin-left: 0;
+		}
+	}
+	&--position-right &__image-wrapper {
+		margin-right: 4.5rem;
 
-  &__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform .4s ease-out;
-    // filter: blur(.1rem) brightness(90%); //
+		@media only screen and (max-width: $b1000) {
+			margin-left: 2.5rem;
+		}
 
-    &:hover {
-      transform: scale(1.07);
-    }
-  }
+		@media only screen and (max-width: $b900) {
+			margin-left: 0;
+		}
+	}
 
-  &__portfolio-video {
-    transition: transform .4s ease-out;
+	&__image-wrapper {
+		flex: 1 1 0%;
+		position: relative;
+		display: flex;
+		width: 100%;
+		cursor: pointer;
 
-    &:hover {
-      transform: scale(1.07);
-    }
-  }
+		@media only screen and (max-width: $b700) {
+			flex: 1 1 auto;
+			margin: 0 auto 3rem;
+		}
+	}
 
-  &__under-construction {
-    position: absolute; //
-    left: 0px; //
-    top: 0px; //
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    filter: drop-shadow(0 2rem 4rem  rgba(0,0,0, .5));
-  }
+	&__image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform .4s ease-out;
+		// filter: blur(.1rem) brightness(90%); //
 
+		&:hover {
+			transform: scale(1.07);
+		}
+	}
 
-  &__content-wrapper {
-    flex: 1 1 0%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+	&__portfolio-video {
+		transition: transform .4s ease-out;
 
-    &--inner {
-      width: 81%;
-      display: flex;
-      flex-direction: column;
+		&:hover {
+			transform: scale(1.07);
+		}
+	}
 
-      @media only screen and (max-width: $b700) {
-        width: 100%;
-        align-items: center;
-      }
-    }
-  }
+	&__under-construction {
+		position: absolute; //
+		left: 0px; //
+		top: 0px; //
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+		filter: drop-shadow(0 2rem 4rem rgba(0, 0, 0, .5));
+	}
 
-  &__content-title {
-    margin-bottom: 2rem;
-    width: 90%;
+	&__content-wrapper {
+		flex: 1 1 0%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
 
-    @media only screen and (max-width: $b700) {
-      width: auto;
-    }
+		&--inner {
+			width: 81%;
+			display: flex;
+			flex-direction: column;
 
-    @media only screen and (max-width: $b500) {
-      margin-bottom: 1rem;
-    }
+			@media only screen and (max-width: $b700) {
+				width: 100%;
+				align-items: center;
+			}
+		}
+	}
 
-    & h2 {
-      font-size: 4rem;
-      font-weight: 500;
-    }
-  }
+	&__content-title {
+		margin-bottom: 2rem;
+		width: 90%;
 
-  &__content-description {
-    margin-bottom: 4rem;
-    max-width: 40rem;
+		@media only screen and (max-width: $b700) {
+			width: auto;
+		}
 
-    @media only screen and (max-width: $b500) {
-      max-width: 31rem;
-    }
-  }
+		@media only screen and (max-width: $b500) {
+			margin-bottom: 1rem;
+		}
 
-  &__btn-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 4rem;
-  }
+		& h2 {
+			font-size: 4rem;
+			font-weight: 500;
+		}
+	}
 
-  &__btn-item {
-    &:link,
-    &:visited {
-      display: flex;
-      align-items: center;
-      font-size: 1.5rem;
-      padding: 1rem 2rem;
-      
-      &:not(:last-child) {
-        margin-right: 2rem;
-        @media only screen and (max-width: $b700) {
-          margin-right: 1rem;
-        }        
-      }
-    }
+	&__content-description {
+		margin-bottom: 4rem;
+		max-width: 40rem;
 
-    &:hover {
-      fill: #fff;
-    }
+		@media only screen and (max-width: $b500) {
+			max-width: 31rem;
+		}
+	}
 
-    &-icon {
-      margin-left: .7rem;
-      height: 1.5rem;
-      width: 1.5rem;
-    }
-  }
+	&__btn-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-bottom: 4rem;
+	}
+
+	&__btn-item {
+		&:link,
+		&:visited {
+			display: flex;
+			align-items: center;
+			font-size: 1.5rem;
+			padding: 1rem 2rem;
+
+			&:not(:last-child) {
+				margin-right: 2rem;
+				@media only screen and (max-width: $b700) {
+					margin-right: 1rem;
+				}
+			}
+		}
+
+		&:hover {
+			fill: #fff;
+		}
+
+		&-icon {
+			margin-left: .7rem;
+			height: 1.5rem;
+			width: 1.5rem;
+		}
+	}
 }
 
 .tags {
-  &__container {
-    display: flex;
-    flex-wrap: wrap;
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
 
-    @media only screen and (max-width: $b700) {
-      justify-content: center;
-    }
-  }
+		@media only screen and (max-width: $b700) {
+			justify-content: center;
+		}
+	}
 
-  &__item {
-    font-size: 1.2rem;
-    font-weight: 600;
-    padding: .6rem .6rem;
-    border-radius: 1.2rem;
-    color: $color-grey;
-    background-color: #000;
-    margin-bottom: .6rem;
+	&__item {
+		font-size: 1.2rem;
+		font-weight: 600;
+		padding: .6rem .6rem;
+		border-radius: 1.2rem;
+		color: $color-grey;
+		background-color: #000;
+		margin-bottom: .6rem;
 
-    &:not(:last-child) {
-      margin-right: .6rem;
-    }
+		&:not(:last-child) {
+			margin-right: .6rem;
+		}
 
-    & p {
-      padding: .6rem 1rem;
-      border: .2rem dashed $color-grey;
-      border-radius: .8rem;
-    }
-  }
+		& p {
+			padding: .6rem 1rem;
+			border: .2rem dashed $color-grey;
+			border-radius: .8rem;
+		}
+	}
 }
 //--- WORK SECTION <END> ---//
 
-
 //--- CONTACT SECTION <START> ---//
 .animated-line {
-  margin-bottom: 6rem;
-  display: block;
-  width: 100%;
-  height: 10rem;
+	margin-bottom: 6rem;
+	display: block;
+	width: 100%;
+	height: 10rem;
 
-  @media only screen and (min-height: $b700) {
-    height: 13rem;
-  }
+	@media only screen and (min-height: $b700) {
+		height: 13rem;
+	}
 
-  &__inner {
-    background-color: $color-grey;
-    width: .2rem;
-    display: block;
-    margin: 0 auto;
-    // height 0.9s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
-  }
+	&__inner {
+		background-color: $color-grey;
+		width: .2rem;
+		display: block;
+		margin: 0 auto;
+		// height 0.9s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+	}
 }
 
 .contact {
-  position: relative;
-  
-  &__title{
-    margin-bottom: 7rem;
+	position: relative;
 
-    // @media only screen and (min-height: $b700) {
-      // margin-bottom: 25rem;
-    // }
+	&__title {
+		margin-bottom: 7rem;
 
-    & h1 {
-      margin-bottom: -.1px;
+		// @media only screen and (min-height: $b700) {
+		// margin-bottom: 25rem;
+		// }
 
-      @media only screen and (max-width: $b600) {
-        font-size: 4rem;
-      }
-    }
-  }
+		& h1 {
+			margin-bottom: -.1px;
 
-  &__btn-email{
-      margin-bottom: 3rem;
-  }
+			@media only screen and (max-width: $b600) {
+				font-size: 4rem;
+			}
+		}
+	}
 
-  &__btn-number {
-      letter-spacing: .22rem;
-      margin-bottom: 6rem;
-  }
+	&__btn-email {
+		margin-bottom: 3rem;
+	}
 
-  &__icon {
-    &-container {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      width: 14.5rem;
-      margin-bottom: 3rem;    
-    }
-    
-    &-link{
-      &:link,
-      &:visited {
-        fill: $color-grey;
-        transition: fill .2s;
-      }
+	&__btn-number {
+		letter-spacing: .22rem;
+		margin-bottom: 6rem;
+	}
 
-      &:hover {
-        fill: $color-pink;
-      }
-    }
+	&__icon {
+		&-container {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-evenly;
+			width: 14.5rem;
+			margin-bottom: 3rem;
+		}
 
-    &-item {
-      height: 3rem;
-      width: 3rem;
-    }
-  }
+		&-link {
+			&:link,
+			&:visited {
+				fill: $color-grey;
+				transition: fill .2s;
+			}
+
+			&:hover {
+				fill: $color-pink;
+			}
+		}
+
+		&-item {
+			height: 3rem;
+			width: 3rem;
+		}
+	}
 }
 
 .copyright {
-  position: absolute;
-  bottom: 2rem;
+	position: absolute;
+	bottom: 2rem;
 }
 //--- CONTACT SECTION <END> ---//
 
