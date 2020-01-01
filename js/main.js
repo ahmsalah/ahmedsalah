@@ -56,7 +56,7 @@ $(document).ready(function() {
   */
 
 	const typed = new Typed('.js-typed', {
-		strings: [ 'A Front-end Web Developer based in Cairo.' ],
+		strings: [ 'A Front-end Developer based in Cairo.' ],
 		typeSpeed: 70,
 		startDelay: 2700,
 		showCursor: false,
